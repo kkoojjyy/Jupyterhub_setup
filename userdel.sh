@@ -2,6 +2,9 @@
 
 # Delete lecturers group
 groupdel lecturers
+groupdel users
+groupdel py2017a
+groupdel py2017b
 
 # Delete lecturer users
 while IFS=, read NAME PW; do
@@ -16,4 +19,3 @@ while IFS=, read NAME PW; do
 	userdel $NAME
 	rm -rf /home/$NAME
 done < <(egrep -v '^#' students.list)
-

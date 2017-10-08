@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p /srv/nbgrader/exchange
 chmod ugo+rw /srv/nbgrader/exchange
 

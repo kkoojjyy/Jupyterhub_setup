@@ -2,6 +2,7 @@
 
 # Add lecturers group
 groupadd lecturers
+groupadd users
 groupadd py2017a
 groupadd py2017b
 
@@ -9,7 +10,7 @@ groupadd py2017b
 while IFS=, read NAME PW; do
     echo "Creating lecturer $NAME"
     if [ -z $PW ]; then
-        useradd -s "/bin/bash" -m -N -g user -G sudo,adm,lecturers $NAME
+        useradd -s "/bin/bash" -m -N -g users -G sudo,adm,lecturers $NAME
 		echo "$NAME password unset"
     else
         useradd -s "/bin/bash" -m -N -g users -G sudo,adm,lecturers -p "$PW" $NAME

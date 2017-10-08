@@ -2,8 +2,8 @@
 
 # Download and install anaconda 
 
-curl -O https://repo.continuum.io/archive/Anaconda3-5.0.0-Linux-x86_64.sh
-sh Anaconda3-5.0.0-Linux-x86_64.sh
+curl -O https://repo.continuum.io/archive/Anaconda3-5.0.0-Linux-x86_64.sh ..
+sh ../Anaconda3-5.0.0-Linux-x86_64.sh
 
 # Add anaconda into PATH
 echo 'export PATH=/opt/anaconda3/bin:$PATH' > /etc/profile.d/anaconda.sh
