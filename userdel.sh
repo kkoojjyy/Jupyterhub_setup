@@ -2,7 +2,6 @@
 
 # Delete lecturers group
 groupdel lecturers
-groupdel users
 groupdel py2017a
 groupdel py2017b
 
@@ -11,11 +10,17 @@ while IFS=, read NAME PW; do
     echo "Delete lecturer $NAME"
     userdel $NAME
 	rm -rf /home/$NAME
-done < <(egrep -v '^#' lecturers.list)
+done < <(egrep -v '^#' data/lecturers.list)
 
-# Add regular users
+# Delete regular users
 while IFS=, read NAME PW; do
     echo "Delete student $NAME"
 	userdel $NAME
 	rm -rf /home/$NAME
-done < <(egrep -v '^#' students.list)
+done < <(egrep -v '^#' data/pya.list)
+
+while IFS=, read NAME PW; do
+    echo "Delete student $NAME"
+	userdel $NAME
+	rm -rf /home/$NAME
+done < <(egrep -v '^#' data/pyb.list)

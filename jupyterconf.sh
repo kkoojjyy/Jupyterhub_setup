@@ -43,9 +43,9 @@ chmod 600 ${CONFDIR}/*
 chmod 600 ${SERVDIR}/*
 
 # Install systemd services
-cp data/jupyterhub.service /etc/systemd/system
-systemctl daemon-reload
-systemctl enable jupyterhub.service
+#cp data/jupyterhub.service /etc/systemd/system
+#systemctl daemon-reload
+#systemctl enable jupyterhub.service
 
 # Optional: Install cull_idle_servers
 #wget http://raw.githubusercontent.com/jupyterhub/jupyterhub/master/examples/cull-idle/cull_idle_servers.py -O ${SERVDIR}/cull-idle-servers
